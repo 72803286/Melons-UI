@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import Jxc from './components/Jxc.vue';
+
 </script>
 
 <template>
-  <div>hi</div>
-  <Jxc />
+  <div>导航栏 |
+    <RouterLink to="/"> Jxc</RouterLink> |
+    <RouterLink to="/xxx">Frank2</RouterLink>
+  </div>
+  <RouterView></RouterView>
 </template>

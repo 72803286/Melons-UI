@@ -1,5 +1,8 @@
 <template>
     <div>
-        我的第一个组件
+        首页
     </div>
 </template>
+<script setup  lang="ts">
+ 
+</script>

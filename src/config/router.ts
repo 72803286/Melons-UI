@@ -1,12 +1,12 @@
 import {RouteRecordRaw} from 'vue-router'
-import Jxc from '../components/Jxc.vue'
-import Frank2  from "../components/Frank2.vue";
+import Home from '../views/home.vue'
+import Doc  from "../views/doc.vue";
 
 export  const routes :RouteRecordRaw[] = [
     {
-        path:'/',component:Jxc
+        path:'/',component:Home
     },
     {
-        path:'/xxx',component:Frank2
+        path:'/doc',component:Doc
     }
 ]

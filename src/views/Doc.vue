@@ -2,7 +2,7 @@
     <div>
         <Topnav />
         <div class="content">
-            <aside>
+            <aside v-if="menuVisible">
                 <h2>组件列表</h2>
                 <ol>
                     <li>
@@ -24,7 +24,9 @@
     </div>
 </template>
 <script setup lang="ts">
+import { Ref, inject } from 'vue';
 import Topnav from '../components/Topnav.vue'
+const menuVisible = inject<Ref<boolean>>('menuVisible')
 </script>
 <style lang="scss" scoped>
 $aside-index : 10;
@@ -64,7 +66,6 @@ $aside-index : 10;
 }
 
 aside {
-    background: lightblue;
     width: 150px;
     padding: 16px 0;
     position: fixed;

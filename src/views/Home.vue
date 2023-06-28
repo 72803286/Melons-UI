@@ -8,8 +8,8 @@
             <h1>Melone UI</h1>
             <h2>一个厉害的UI框架</h2>
             <p class="actions">
-                <a>Github</a>
-                <a>开始</a>
+                <a href="https://github.com">Github</a>
+                <RouterLink to="/doc" >开始</RouterLink>
             </p>
         </div>
     </div>

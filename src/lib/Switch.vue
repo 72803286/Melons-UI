@@ -1,14 +1,21 @@
 <template>
   <div>
-    <button @click="toggle" :class="{ checked }"><span></span></button>
+    <button @click="toggle" :class="{ check:props.value }"><span></span></button>
+    <div>{{ props.value }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const checked = ref(false)
+
+interface Props {
+  value:boolean
+}
+const props =defineProps<Props>()
+
+const emit = defineEmits(['input'])
+
 const toggle = () => {
-  checked.value = !checked.value
+  emit('input',!props.value)
 }
 </script>
 
@@ -36,7 +43,7 @@ span {
   transition:left .25s;
 }
 
-button.checked {
+button.check {
   background: blue;
 
   >span {

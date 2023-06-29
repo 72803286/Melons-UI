@@ -1,17 +1,30 @@
 <template>
-    <button class="gulu-button" :class="{[`gulu-theme-${props.theme}`]:props.theme}" >
+    <button class="gulu-button" :class="guluclass">
         <slot>默认按钮</slot>
     </button>
 </template>
 
 
 <script setup lang="ts">
-    const props = defineProps({
-        theme:{
-            type:String,
-            default:'button'
-        }
-    })
+import { computed } from 'vue';
+
+ const props = defineProps({
+    theme: {
+        type: String,
+        default: 'button'
+    },
+    size: {
+        type: String,
+        default: 'normal'
+    }
+})
+
+const guluclass = computed(()=> {
+    return {
+        [`gulu-theme-${props.theme}`]: props.theme,
+        [`gulu-size-${props.size}`]: props.size
+    }
+})
 
 </script>
 
@@ -49,22 +62,33 @@ $radius: 4px;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.gulu-theme-link{
+  &.gulu-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
-    &:hover,&:focus{
+    &:hover,
+    &:focus {
       color: lighten($blue, 10%);
     }
   }
-  &.gulu-theme-text{
+  &.gulu-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
-    &:hover,&:focus{
-      background: darken(white, 5%);;
+    &:hover,
+    &:focus {
+      background: darken(white, 5%);
     }
-
+  }
+  &.gulu-size-big {
+    font-size: 24px;
+    height: 48px;
+    padding: 0 16px;
+  }
+  &.gulu-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
   }
 }
 </style>

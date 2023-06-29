@@ -1,21 +1,21 @@
 <template>
   <div>
-    <button @click="toggle" :class="{ check:props.value }"><span></span></button>
-    <div>{{ props.value }}</div>
+    <button @click="toggle" :class="{ check:props.modelValue }"><span></span></button>
+    <div>{{ props.modelValue }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
 
 interface Props {
-  value:boolean
+  modelValue:boolean
 }
 const props =defineProps<Props>()
 
-const emit = defineEmits(['input'])
+const emit = defineEmits(['update:modelValue'])
 
 const toggle = () => {
-  emit('input',!props.value)
+  emit('update:modelValue',!props.modelValue)
 }
 </script>
 

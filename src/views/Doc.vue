@@ -6,20 +6,22 @@
                 <h2>组件列表</h2>
                 <ol>
                     <li>
-                        <RouterLink to="/doc/swich">Swich组件</RouterLink>
+                        <RouterLink to="/doc/switch">Switch组件</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/doc/swich">Button组件</RouterLink>
+                        <RouterLink to="/doc/button">Button组件</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/doc/swich">Dialog组件</RouterLink>
+                        <RouterLink to="/doc/dialog">Dialog组件</RouterLink>
                     </li>
                     <li>
-                        <RouterLink to="/doc/swich">Tabs组件</RouterLink>
+                        <RouterLink to="/doc/tabs">Tabs组件</RouterLink>
                     </li>
                 </ol>
             </aside>
-            <main>主要内容</main>
+            <main>
+              <RouterView></RouterView>
+            </main>
         </div>
     </div>
 </template>
@@ -47,6 +49,12 @@ aside {
     top: 0;
     left: 0;
     padding-top: 70px;
+  }
+}
+.content {
+  display:flex;
+  >main{
+    // flex: 1;
   }
 }
 </style>

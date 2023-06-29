@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import Button from "../lib/Button.vue"
-const msg = '示例1按钮'
+const msg = '按钮'
 
 </script>
 

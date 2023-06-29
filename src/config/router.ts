@@ -5,6 +5,8 @@ import SwitchDemo from '../components/SwitchDemo.vue'
 import DialogDemo from '../components/DialogDemo.vue'
 import ButtonDemo from '../components/ButtonDemo.vue'
 import TabsDemo from '../components/TabsDemo.vue'
+import DocDemo from '../components/DocDemo.vue'
+
 
 const routes :RouteRecordRaw[] = [
     {
@@ -12,6 +14,7 @@ const routes :RouteRecordRaw[] = [
     },
     {
         path:'/doc',component:Doc,children:[
+            {path:'',component:DocDemo},
             {path:'switch',component:SwitchDemo},
             {path:'button',component:ButtonDemo},
             {path:'dialog',component:DialogDemo},

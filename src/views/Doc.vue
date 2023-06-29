@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="layout">
       <Topnav calss = 'nav' />
       <div class="content">
@@ -25,7 +24,6 @@
         </main>
       </div>
     </div>
-  </div>
 </template>
 <script setup lang="ts">
 import { Ref, inject } from 'vue';
@@ -58,7 +56,7 @@ const menuVisible = inject<Ref<boolean>>('menuVisible')
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
+    background: white;
   }
 }
 aside {

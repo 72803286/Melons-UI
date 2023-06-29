@@ -2,13 +2,17 @@
     <div>Button示例</div>
     <h1>示例1</h1>
     <div>
-       <Button>示例1按钮</Button>
+       <Button  @click="onClick" 
+            @focus="onClick" 
+            @mouseover="onClick">
+        示例1按钮</Button>
     </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import Button from "../lib/Button.vue"
-export default {
-    components: { Button },
+const onClick = () => {
+    console.log('hi')    
 }
 </script>
+

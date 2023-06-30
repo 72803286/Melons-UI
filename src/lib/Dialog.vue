@@ -1,28 +1,53 @@
 <template>
-    <div v-if="props.visiable">
-        <div class="gulu-dialog-overlay"></div>
+    <template v-if="visiable">
+        <div class="gulu-dialog-overlay" @click="overlayClose"></div>
         <div class="gulu-dialog-wrapper">
             <div class="gulu-dialog">
-                <header>title<span class="gulu-dialog-close"></span></header>
+                <header>
+                    title
+                    <span class="gulu-dialog-close" @click="close"></span>
+                </header>
                 <main>
                     <p>line one</p>
                     <p>line one</p>
                 </main>
                 <footer>
-                    <Button>OK</Button>
-                    <Button>Cancle</Button>
+                    <Button level="main" @click="aa">OK</Button>
+                    <Button @click="bb">Cancle</Button>
                 </footer>
             </div>
         </div>
-    </div>
+    </template>
 </template>
 
 
 <script setup lang="ts">
 import Button from '../lib/Button.vue'
 const props = defineProps({
-    visiable: Boolean
+    visiable: { type: Boolean, default: false },
+    closeOnClickOverlay: { type: Boolean, default: true },
+    okfn: Function,
+    canclefn: Function
 })
+const emit = defineEmits(['update:visiable'])
+const close = () => {
+    emit('update:visiable', false)
+}
+const overlayClose = () => {
+    if (props.closeOnClickOverlay) {
+        close()
+    }
+}
+const aa = () => {
+    if (props.okfn?.() !== false) {
+        close()
+    }
+}
+const bb = () => {
+    props.canclefn?.()
+    close()
+}
+
 </script>
 
 

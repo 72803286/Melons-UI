@@ -11,12 +11,15 @@
             <strong>加粗标题</strong>
         </template>
     </Dialog>
+    <h1>示例2</h1>
+    <Button @click="showDialog">show</Button>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import Dialog from '../lib/Dialog.vue'
 import Button from '../lib/Button.vue'
+import {createDialog} from '../lib/createDialog'
 const visiable = ref(false)
 const ok = () => {
     console.log('ok');
@@ -27,5 +30,13 @@ const cancle = () => {
 }
 const toggle = () => {
     visiable.value = !visiable.value
+}
+const showDialog=() =>{
+    createDialog({
+        title:'标题1',
+        content:'你好1',
+        ok,
+        cancle,
+    })
 }
 </script> 

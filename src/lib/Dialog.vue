@@ -12,8 +12,8 @@
                         <slot name="main"></slot>
                     </main>
                     <footer>
-                        <Button level="main" @click="aa">OK</Button>
-                        <Button @click="bb">Cancle</Button>
+                        <Button level="main" @click="clickok">OK</Button>
+                        <Button @click="clickcancle">Cancle</Button>
                     </footer>
                 </div>
             </div>
@@ -39,12 +39,12 @@ const overlayClose = () => {
         close()
     }
 }
-const aa = () => {
+const clickok = () => {
     if (props.okfn?.() !== false) {
         close()
     }
 }
-const bb = () => {
+const clickcancle = () => {
     props.canclefn?.()
     close()
 }

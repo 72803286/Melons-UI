@@ -4,11 +4,11 @@
         <div class="gulu-dialog-wrapper">
             <div class="gulu-dialog">
                 <header>
-                    {{title}}
+                    <slot name="title"></slot>
                     <span class="gulu-dialog-close" @click="close"></span>
                 </header>
                 <main>
-                    <slot></slot>
+                    <slot name="main"></slot>
                 </main>
                 <footer>
                     <Button level="main" @click="aa">OK</Button>
@@ -27,10 +27,6 @@ const props = defineProps({
     closeOnClickOverlay: { type: Boolean, default: true },
     okfn: Function,
     canclefn: Function,
-    title:{
-        type:String,
-        default:'this is title'
-    }
 })
 const emit = defineEmits(['update:visiable'])
 const close = () => {

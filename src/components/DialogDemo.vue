@@ -2,9 +2,14 @@
     <div>Dialog示例
         <h1>示例1</h1>
         <Button @click="toggle">toggle</Button>
-        <Dialog  v-model:visiable="visiable" :closeOnClickOverlay="true" :okfn="ok" :canclefn="cancle" title="标题">
-            <p>hi1</p>
-            <p>hi2</p>
+        <Dialog  v-model:visiable="visiable" :closeOnClickOverlay="true" :okfn="ok" :canclefn="cancle">
+            <template #main>
+                <p>hi1</p>
+                <p>hi2</p>
+            </template>
+            <template #title>
+                <strong >加粗标题</strong>
+            </template>
         </Dialog>
     </div>
 </template>

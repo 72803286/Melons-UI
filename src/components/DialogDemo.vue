@@ -1,17 +1,16 @@
 <template>
-    <div>Dialog示例
-        <h1>示例1</h1>
-        <Button @click="toggle">toggle</Button>
-        <Dialog  v-model:visiable="visiable" :closeOnClickOverlay="true" :okfn="ok" :canclefn="cancle">
-            <template #main>
-                <p>hi1</p>
-                <p>hi2</p>
-            </template>
-            <template #title>
-                <strong >加粗标题</strong>
-            </template>
-        </Dialog>
-    </div>
+    <div>Dialog示例</div>
+    <h1>示例1</h1>
+    <Button @click="toggle">toggle</Button>
+    <Dialog v-model:visiable="visiable" :closeOnClickOverlay="true" :okfn="ok" :canclefn="cancle">
+        <template #main>
+            <p>hi1</p>
+            <p>hi2</p>
+        </template>
+        <template #title>
+            <strong>加粗标题</strong>
+        </template>
+    </Dialog>
 </template>
 
 <script setup lang="ts">
@@ -26,7 +25,7 @@ const ok = () => {
 const cancle = () => {
     console.log('cancle');
 }
-const toggle=()=>{
+const toggle = () => {
     visiable.value = !visiable.value
 }
 </script> 

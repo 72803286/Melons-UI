@@ -1,21 +1,23 @@
 <template>
     <template v-if="visiable">
-        <div class="gulu-dialog-overlay" @click="overlayClose"></div>
-        <div class="gulu-dialog-wrapper">
-            <div class="gulu-dialog">
-                <header>
-                    <slot name="title"></slot>
-                    <span class="gulu-dialog-close" @click="close"></span>
-                </header>
-                <main>
-                    <slot name="main"></slot>
-                </main>
-                <footer>
-                    <Button level="main" @click="aa">OK</Button>
-                    <Button @click="bb">Cancle</Button>
-                </footer>
+        <teleport to="body">
+            <div class="gulu-dialog-overlay" @click="overlayClose"></div>
+            <div class="gulu-dialog-wrapper">
+                <div class="gulu-dialog">
+                    <header>
+                        <slot name="title"></slot>
+                        <span class="gulu-dialog-close" @click="close"></span>
+                    </header>
+                    <main>
+                        <slot name="main"></slot>
+                    </main>
+                    <footer>
+                        <Button level="main" @click="aa">OK</Button>
+                        <Button @click="bb">Cancle</Button>
+                    </footer>
+                </div>
             </div>
-        </div>
+        </teleport>
     </template>
 </template>
 

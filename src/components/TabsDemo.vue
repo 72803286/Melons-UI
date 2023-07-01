@@ -11,3 +11,4 @@
 import Tab from '../lib/Tab.vue'
 import Tabs from '../lib/Tabs.vue'
 </script>
+

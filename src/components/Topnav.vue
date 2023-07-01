@@ -18,7 +18,6 @@
 </script>
 
 
-
 <style lang="scss" scoped>
 .topnav {
   background: pink;

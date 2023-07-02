@@ -1,6 +1,7 @@
 <template>
     <div>
-        <component v-for="item in defaults " :is="item"></component>
+        <div v-for="(t,index) in titles" :key="index"> {{ t }} </div>
+        <component v-for="(item,index) in defaults " :key="index" :is="item"></component>
     </div>
 </template>
 
@@ -14,5 +15,6 @@ import { useSlots } from 'vue';
             throw new Error('Tabs子标签必须是Tab')
         }}      
     );
+    const titles = defaults?.map(tags => tags.props?.title)
     
 </script>

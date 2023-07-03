@@ -1,15 +1,18 @@
 <template>
   <div class="topnav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-melons"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>
+      <router-link to="/doc">文档</router-link>
+    </li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <svg v-if="props.toggleMenuButtonVisible" class="toggleAside icon icon-menu" @click="toggleMenu">
+          <use xlink:href="#icon-menu"></use>
+    </svg>
   </div>
 </template>
 
@@ -19,6 +22,12 @@ const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
 const toggleMenu = () => {
   menuVisible!.value = !menuVisible?.value;
 };
+const props = defineProps({
+  toggleMenuButtonVisible:{
+    type:Boolean,
+    default:false
+  }
+})
 </script>
 
 
@@ -55,9 +64,9 @@ const toggleMenu = () => {
   }
 
   >.toggleAside {
-    width: 24px;
-    height: 24px;
-    background: red;
+    width: 32px;
+    height: 32px;
+
     position: absolute;
     left: 16px;
     top: 50%;

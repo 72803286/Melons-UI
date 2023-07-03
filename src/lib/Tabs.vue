@@ -2,7 +2,7 @@
     <div class="gulu-tabs">
         <div class="gulu-tabs-nav" ref = 'container'>
             <div class="gulu-tabs-nav-item" 
-            v-for="(t, index) in titles" :key="index" :ref="el =>{if(el) navItems[index]=el}" @click="selecte(t)" :class="{selected : (t === props.selected)}" > {{ t }} </div>
+            v-for="(t, index) in titles" :key="index" :ref="(el) =>{if(t === props.selected) selectedItem=el}" @click="selecte(t)" :class="{selected : (t === props.selected)}" > {{ t }} </div>
             <div class="gulu-tabs-nav-indicator" ref = 'indicator'></div>
         </div>
         <div class="gulu-tabs-content" > 
@@ -16,7 +16,7 @@ import Tab from '../lib/Tab.vue'
 import { useSlots,ref,onMounted,onUpdated } from 'vue';
 const slots = useSlots()
 const defaults = slots.default?.()
-const navItems = ref<any>([])
+const selectedItem = ref<any>(null)
 const indicator = ref<any>(null)
 const container = ref<any>(null)
 defaults?.forEach(child => {
@@ -35,14 +35,10 @@ const selecte = (title:String) =>{
     emit("update:selected",title)
 }
 const x = ()=>{
-  const divs = navItems.value
-  const result = divs.filter((e:HTMLDivElement)=>{
-    return e.classList.contains('selected')
-  })[0]
-  const { width } = result.getBoundingClientRect()
+  const { width } = selectedItem.value.getBoundingClientRect()
   indicator.value.style.width = width +'px'
   const {left:navleft} = container.value.getBoundingClientRect()
-  const {left:navitemsleft} = result.getBoundingClientRect()
+  const {left:navitemsleft} = selectedItem.value.getBoundingClientRect()
   const left = navitemsleft-navleft
   indicator.value.style.left = left +'px'
 }
@@ -92,14 +88,6 @@ $border-color: #d9d9d9;
 
   &-content {
     padding: 8px 0;
-
-    &-item {
-      display: none;
-
-      &.selected {
-        display: block;
-      }
-    }
   }
 }
 </style>

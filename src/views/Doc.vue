@@ -45,7 +45,7 @@ const menuVisible = inject<Ref<boolean>>('menuVisible')
 
 <style lang="scss" scoped>
 .router-link-active {
-  text-decoration: underline;
+  color: #42b883;
 }
 .layout {
   display: flex;
@@ -75,7 +75,7 @@ const menuVisible = inject<Ref<boolean>>('menuVisible')
   }
 }
 aside {
-  background: lightblue;
+  border-right:1px solid rgba(0, 0, 0, 0.096) ;
   width: 150px;
   padding: 16px;
   position: fixed;
@@ -89,6 +89,9 @@ aside {
   > ol {
     > li {
       padding: 4px 0;
+      >a{
+        text-decoration: none;
+      }
     }
   }
 }

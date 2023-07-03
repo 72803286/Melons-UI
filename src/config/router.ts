@@ -6,6 +6,9 @@ import DialogDemo from '../components/DialogDemo.vue'
 import ButtonDemo from '../components/ButtonDemo.vue'
 import TabsDemo from '../components/TabsDemo.vue'
 import DocDemo from '../components/DocDemo.vue'
+import Intro from '../views/Intro.vue'
+import GetStarted from '../views/GetStarted.vue'
+import Install from '../views/Install.vue'
 
 
 const routes :RouteRecordRaw[] = [
@@ -18,7 +21,11 @@ const routes :RouteRecordRaw[] = [
             {path:'switch',component:SwitchDemo},
             {path:'button',component:ButtonDemo},
             {path:'dialog',component:DialogDemo},
-            {path:'tabs',component:TabsDemo}
+            {path:'tabs',component:TabsDemo},
+            {path:'intro',component:Intro},
+            {path:'start',component:GetStarted},
+            {path:'install',component:Install},
+            
         ]
     }
 ]

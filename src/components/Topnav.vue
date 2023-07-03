@@ -40,7 +40,7 @@ const props = defineProps({
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   justify-content: center;
   align-items: center;
 
@@ -62,6 +62,7 @@ const props = defineProps({
       margin: 0 1em;
     }
   }
+
 
   >.toggleAside {
     width: 32px;

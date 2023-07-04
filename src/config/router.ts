@@ -1,6 +1,6 @@
 import {RouteRecordRaw, createRouter, createWebHashHistory} from 'vue-router'
-import Home from '../views/home.vue'
-import Doc  from "../views/doc.vue";
+import Home from '../views/Home.vue'
+import Doc  from "../views/Doc.vue";
 import SwitchDemo from '../components/SwitchDemo.vue'
 import DialogDemo from '../components/DialogDemo.vue'
 import ButtonDemo from '../components/ButtonDemo.vue'

@@ -75,6 +75,7 @@ const menuVisible = inject<Ref<boolean>>('menuVisible')
   }
 }
 aside {
+  background-color: white;
   border-right:1px solid rgba(0, 0, 0, 0.096) ;
   width: 150px;
   padding: 16px;

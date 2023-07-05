@@ -1,18 +1,51 @@
-# Vue 3 + TypeScript + Vite
+# 介绍
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Melons UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
 
-## Recommended IDE Setup
+这款组件库其实是我为了总结自己这几年的技术经验而写的，全程亲手编写，尽量不采用第三方库，包括你现在看到的这个官网也几乎都是我自己写的。
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+所以如果强烈不建议你将此 UI 库用于生产环境。但如果你是抱着看源代码的目的来的，那么这个库还是值得一看的。源代码放在了 https://github.com/72803286/Melons-UI。
+历史提交信息非常规范，你可以按提交的顺序逐个查看；你也可以直接查看每个组件的源代码和示例。
 
-## Type Support For `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+# 安装
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+打开终端运行下列命令：
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```
+npm install Melons-ui
+```
+
+或
+
+```
+yarn add Melons-ui
+```
+
+# 开始使用
+
+在你的代码中写入下面的代码
+
+```
+import {Button, Tabs, Switch, Dialog} from "Melons-ui"
+```
+
+就可以使用我提供的组件了。
+
+## Vue 单文件组件
+
+代码示例：
+
+```vue
+<template>
+  <div>
+    <Button>按钮</Button>
+  </div>
+</template>
+<script>
+import {Button, Tabs, Switch, Dialog} from "Melons-ui"
+export default {
+  components: {Button}
+}
+</script>
+```

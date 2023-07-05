@@ -10,9 +10,11 @@
       <router-link to="/doc">文档</router-link>
     </li>
     </ul>
-    <svg v-if="props.toggleMenuButtonVisible" class="toggleAside icon icon-menu" @click="toggleMenu">
-          <use xlink:href="#icon-menu"></use>
+    <div class="xxx">
+      <svg v-if="props.toggleMenuButtonVisible" class="toggleAside icon icon-menu" @click="toggleMenu">
+          <use xlink:href="#icon-menu" ></use>
     </svg>
+    </div>
   </div>
 </template>
 
@@ -36,20 +38,29 @@ const props = defineProps({
   color: #007974;
   display: flex;
   padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
+  // position: fixed;
+  
   width: 100%;
   z-index: 20;
   justify-content: center;
   align-items: center;
+  >.xxx{
+    display: flex;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    >svg{
+      width:40px;
+      height: 40px;
+    }
+  }
 
   >.logo {
     max-width: 6em;
     margin-right: auto;
     >svg{
-      width:40px;
-      height: 40px;
+      width:30px;
+      height: 30px;
     }
   }
 
@@ -76,6 +87,10 @@ const props = defineProps({
   }
 
   @media (max-width: 500px) {
+    .topnav{
+      display: flex;
+      position:relative;
+    }
     >.menu {
       display: none;
     }

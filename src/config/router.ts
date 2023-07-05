@@ -5,7 +5,6 @@ import SwitchDemo from '../components/SwitchDemo.vue'
 import DialogDemo from '../components/DialogDemo.vue'
 import ButtonDemo from '../components/ButtonDemo.vue'
 import TabsDemo from '../components/TabsDemo.vue'
-import DocDemo from '../components/DocDemo.vue'
 import Intro from "../markdown/intro.md"
 import Start from "../markdown/get-started.md"
 import Install from "../markdown/install.md"
@@ -17,7 +16,7 @@ const routes: RouteRecordRaw[] = [
     },
     {
         path: '/doc', component: Doc, children: [
-            { path: '', component: DocDemo },
+            { path: '', redirect:'/doc/intro' },
             { path: 'switch', component: SwitchDemo },
             { path: 'button', component: ButtonDemo },
             { path: 'dialog', component: DialogDemo },

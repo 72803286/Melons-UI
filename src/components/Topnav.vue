@@ -50,8 +50,8 @@ const props = defineProps({
     top: 15px;
     left: 15px;
     >svg{
-      width:40px;
-      height: 40px;
+      width:30px;
+      height: 30px;
     }
   }
 

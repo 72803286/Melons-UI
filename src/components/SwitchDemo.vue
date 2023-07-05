@@ -11,7 +11,5 @@
 // import Switch from '../lib/Switch.vue'
 import Switch1Demo from './Switch1.demo.vue'
 import Switch2Demo from './Switch2.demo.vue'
-import  'prismjs';
-import "prismjs/themes/prism-okaidia.css"
 import Demo from '../components/Demo.vue'
 </script>

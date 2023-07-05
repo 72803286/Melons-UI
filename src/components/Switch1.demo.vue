@@ -1,4 +1,4 @@
-<demo>xxx </demo>
+<demo>常规用法 </demo>
 <template>
     <Switch v-model="bool"/>
 </template>

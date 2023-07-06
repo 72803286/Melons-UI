@@ -1,6 +1,9 @@
 <template>
-<Demo :component="Dialog1Demo" />
-<Demo :component="Dialog2Demo" />
+    <div>
+        <h1>Button示例</h1>
+        <Demo :component="Dialog1Demo" />
+        <Demo :component="Dialog2Demo" />
+    </div>
 </template>
 
 <script setup lang="ts">

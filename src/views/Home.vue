@@ -9,7 +9,7 @@ import Topnav from '../components/Topnav.vue'
         <h1>Melones UI</h1>
         <h2>一个厉害的UI框架</h2>
         <p class="actions">
-          <a href="https://github.com">Github</a>
+          <a href="https://github.com/72803286/Melons-UI">Github</a>
           <RouterLink to="/doc">开始</RouterLink>
         </p>
       </div>

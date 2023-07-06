@@ -13,13 +13,13 @@ Melons UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
 打开终端运行下列命令：
 
 ```
-npm install Melons-ui
+npm install melons
 ```
 
 或
 
 ```
-yarn add Melons-ui
+yarn add melons
 ```
 
 # 开始使用
@@ -27,7 +27,7 @@ yarn add Melons-ui
 在你的代码中写入下面的代码
 
 ```
-import {Button, Tabs, Switch, Dialog} from "Melons-ui"
+import {Button, Tabs, Switch, Dialog} from "melons"
 ```
 
 就可以使用我提供的组件了。
@@ -43,7 +43,7 @@ import {Button, Tabs, Switch, Dialog} from "Melons-ui"
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "Melons-ui"
+import {Button, Tabs, Switch, Dialog} from "melons"
 export default {
   components: {Button}
 }

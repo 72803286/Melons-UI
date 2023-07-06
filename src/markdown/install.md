@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-npm install Melons-ui
+npm install melons
 ```
 
 或
 
 ```
-yarn add Melons-ui
+yarn add melons
 ```
 
 下一节：[开始使用](#/doc/start)

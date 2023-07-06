@@ -1,10 +1,9 @@
 {
-  "name": "makewheel",
-  "private": true,
-  "version": "0.0.0",
+  "name": "melons",
+  "version": "0.0.1",
   "type": "module",
   "files": ["dist/lib/*"],
-  "main": "",
+  "main": "dist/lib/gulu.js",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",

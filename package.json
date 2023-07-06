@@ -10,9 +10,6 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
-  "resolutions": {
-    "node-sass": "npm:sass@^1.26.11"
-  },
   "dependencies": {
     "@vue/compiler-core": "^3.3.4",
     "github-markdown-css": "5.2.0",
